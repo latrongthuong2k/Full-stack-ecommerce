@@ -1,0 +1,41 @@
+version: 'latest'
+
+services:
+  mysql-ecommerce-database:
+    image: mysql:latest
+    container_name: mysql-ecommerce-container
+    ports:
+      - 3307:3306
+    volumes:
+      - mysql-springboot-data:/var/lib/mysql
+      - mysql-springboot-config-deamond:/etc/mysql/conf.d
+      - ./sql-scripts:/docker-entrypoint-initdb.d
+    networks:
+      - backend
+    environment:
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ecommerce-db # Tự động tạo schema ecommerce_db
+
+  springboot-app-ecommerce:
+    image: thuong191020/fullstack-app:v1.0.1
+    container_name: springboot-app-ecommerce-container
+    ports:
+      - 8080:8080
+    networks:
+      - backend
+    depends_on:
+      - mysql-ecommerce-database # Đảm bảo Spring Boot khởi động sau MySQL
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    env_file:
+      - .env
+
+networks:
+  backend:
+    name: ecommerce-backend
+
+volumes:
+  mysql-springboot-data:
+  mysql-springboot-config-deamond:

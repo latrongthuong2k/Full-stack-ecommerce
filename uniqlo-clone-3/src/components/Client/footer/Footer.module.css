@@ -1,0 +1,48 @@
+
+.item {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.testColor {
+    color: #858585;
+
+}
+
+.facebook {
+    width: 24px;
+    height: 24px;
+}
+
+.youtube {
+    width: 30px;
+    height: 230px;
+}
+
+.instagram {
+    width: 26px;
+    height: 26px;
+}
+
+.tiktok {
+    width: 19px;
+    height: 19px;
+    color: white;
+    padding: 2px;
+    background-color: black;
+    border-radius: 4px;
+}
+
+.line {
+    width: 22px;
+    height: 22px;
+}
+
+.twitter {
+    width: 24px;
+    height: 24px;
+}

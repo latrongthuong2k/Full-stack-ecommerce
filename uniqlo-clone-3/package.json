@@ -1,0 +1,48 @@
+{
+  "name": "uniqlo-clone-3",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@builder.io/dev-tools": "^0.2.8",
+    "@builder.io/react": "^3.1.1",
+    "@builder.io/sdk": "^2.1.1",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@nextui-org/react": "^2.2.9",
+    "clsx": "^2.1.0",
+    "cookies-next": "^4.1.0",
+    "decimal.js": "^10.4.3",
+    "embla-carousel-react": "^8.0.0-rc18",
+    "formik": "^2.4.5",
+    "framer-motion": "^10.17.9",
+    "next": "^14.0.4",
+    "postcss": "^8.4.33",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.3",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^4.12.0",
+    "react-intersection-observer": "^9.5.3",
+    "react-loading-skeleton": "^3.3.1",
+    "tailwindcss": "^3.4.1",
+    "use-debounce": "^10.0.0",
+    "yup": "^1.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "14.0.4",
+    "prettier": "^3.1.1",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "typescript": "5.3.3"
+  }
+}
